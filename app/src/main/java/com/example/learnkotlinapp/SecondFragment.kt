@@ -15,7 +15,7 @@ import androidx.navigation.fragment.navArgs
  */
 class SecondFragment : Fragment() {
 
-    //line where the arguments are
+    //line where the arguments are - pass data between fragments
     val args: SecondFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -30,7 +30,7 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.button_second).setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+           this.findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
     // create a click listner, add lines to get the count argument, get the string and format it with the count and then set it for the textview_header
         val count = args.myArg
