@@ -49,7 +49,7 @@ class Activity1Fragment : Fragment() {
 
             val showCountTextView = view.findViewById<TextView>(R.id.textview_first)
             val currentCount = showCountTextView.text.toString().toInt()
-            val action = Activity1FragmentDirections.actionActivity1FragmentToActivity1Fragment2(currentCount)
+           val action = Activity1FragmentDirections.actionActivity1FragmentToActivity1Fragment2(currentCount)
             findNavController().navigate(action)
         }
 

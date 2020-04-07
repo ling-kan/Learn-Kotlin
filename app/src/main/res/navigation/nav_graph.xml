@@ -11,11 +11,11 @@
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_activity1">
         <action
-            android:id="@+id/action_Activity1Fragment_to_Activity1Fragment2"
-            app:destination="@id/Activity1Fragment2" />
-        <action
             android:id="@+id/action_Activity1Fragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_Activity1Fragment_to_Activity1Fragment2"
+            app:destination="@id/Activity1Fragment2" />
     </fragment>
     <fragment
         android:id="@+id/Activity1Fragment2"
@@ -38,5 +38,13 @@
         <action
             android:id="@+id/action_mainFragment_to_Activity1Fragment"
             app:destination="@id/Activity1Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_Activity2Fragment"
+            app:destination="@id/Activity2Fragment" />
     </fragment>
+    <fragment
+        android:id="@+id/Activity2Fragment"
+        android:name="com.example.learnkotlinapp.Activity2Fragment"
+        android:label="fragment_activity2"
+        tools:layout="@layout/fragment_activity2" />
 </navigation>
