@@ -13,24 +13,24 @@ import androidx.navigation.fragment.navArgs
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class SecondFragment : Fragment() {
+class Activity1Fragment2 : Fragment() {
 
     //line where the arguments are - pass data between fragments
-    val args: SecondFragmentArgs by navArgs()
+    val args: Activity1Fragment2Args by navArgs()
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false)
+        return inflater.inflate(R.layout.fragment_activity1_2, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.button_second).setOnClickListener {
-           this.findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+           this.findNavController().navigate(R.id.action_Activity1Fragment2_to_Activity1Fragment)
         }
     // create a click listner, add lines to get the count argument, get the string and format it with the count and then set it for the textview_header
         val count = args.myArg

@@ -13,7 +13,7 @@ import androidx.navigation.fragment.findNavController
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FirstFragment : Fragment() {
+class Activity1Fragment : Fragment() {
 
     private fun countMe(view: View){
         //get the text view
@@ -34,15 +34,14 @@ class FirstFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first, container, false)
+        return inflater.inflate(R.layout.fragment_activity1, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        view.findViewById<Button>(R.id.button_first).setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        view.findViewById<Button>(R.id.activity1_home_button).setOnClickListener{
+            findNavController().navigate(R.id.action_Activity1Fragment_to_mainFragment)
         }
 
         view.findViewById<Button>(R.id.random_button).setOnClickListener{
@@ -50,7 +49,7 @@ class FirstFragment : Fragment() {
 
             val showCountTextView = view.findViewById<TextView>(R.id.textview_first)
             val currentCount = showCountTextView.text.toString().toInt()
-            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(currentCount)
+            val action = Activity1FragmentDirections.actionActivity1FragmentToActivity1Fragment2(currentCount)
             findNavController().navigate(action)
         }
 

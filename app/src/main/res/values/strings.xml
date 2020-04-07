@@ -18,4 +18,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="activity1_button">Activity 1</string>
+    <string name="textview_0">0</string>
+    <string name="activity2_button">activity 2</string>
+    <string name="home_button">Home</string>
 </resources>
