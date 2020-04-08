@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_activity2.*
+
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -29,6 +31,12 @@ class Activity2Fragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(activity)
         recyclerView.adapter = ExampleAdapter(exampleList)
         recyclerView.setHasFixedSize(true) //optimisation
+        recyclerView.addItemDecoration(
+            DividerItemDecoration(
+                context,
+                DividerItemDecoration.VERTICAL
+            )
+        )
     }
 
     private fun createFakeList(size: Int): List<ExampleItem> {

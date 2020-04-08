@@ -32,8 +32,8 @@ class ExampleAdapter(private val exampleList: List<ExampleItem>) :
         holder.textView1.text = currentItem.text1
         holder.textView2.text = currentItem.text2
 
-        holder.imageView.setOnClickListener {
-            Toast.makeText(holder.imageView.context, "Clicked", Toast.LENGTH_SHORT).show()
+        holder.itemView.setOnClickListener {
+            Toast.makeText(holder.imageView.context, "Clicked ${currentItem.text1} ${currentItem.text2} " , Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -44,6 +44,5 @@ class ExampleAdapter(private val exampleList: List<ExampleItem>) :
         // itemView.image_view is the same as  itemView.findViewById(R.id.image_view)
         val textView1: TextView = itemView.text_view1
         val textView2: TextView = itemView.text_view2
-
     }
 }
