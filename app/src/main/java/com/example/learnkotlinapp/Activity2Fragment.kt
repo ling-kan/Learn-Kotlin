@@ -24,18 +24,14 @@ class Activity2Fragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val exampleList = generateDummyList(100)
+        val exampleList = createFakeList(100)
 
         recyclerView.layoutManager = LinearLayoutManager(activity)
         recyclerView.adapter = ExampleAdapter(exampleList)
-        //recyclerView.layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(activity)
-        //recyclerView.layoutManager = new LinearLayoutManager(getContext())
-        //  recyclerView.layoutManager = LinearLayoutManager(this) //responsible for position for recycle view
         recyclerView.setHasFixedSize(true) //optimisation
     }
 
-
-    private fun generateDummyList(size: Int): List<ExampleItem> {
+    private fun createFakeList(size: Int): List<ExampleItem> {
         val list = ArrayList<ExampleItem>()
         for (i in 0 until size) {
             val drawable = when (i % 3) {
