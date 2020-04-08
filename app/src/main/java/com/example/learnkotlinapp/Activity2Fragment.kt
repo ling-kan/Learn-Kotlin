@@ -4,11 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_activity2.*
 
@@ -21,10 +17,41 @@ class Activity2Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_activity2, container, false)
-
     }
 
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        val exampleList = generateDummyList(100)
+
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+        recyclerView.adapter = ExampleAdapter(exampleList)
+        //recyclerView.layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(activity)
+        //recyclerView.layoutManager = new LinearLayoutManager(getContext())
+        //  recyclerView.layoutManager = LinearLayoutManager(this) //responsible for position for recycle view
+        recyclerView.setHasFixedSize(true) //optimisation
+    }
+
+
+    private fun generateDummyList(size: Int): List<ExampleItem> {
+        val list = ArrayList<ExampleItem>()
+        for (i in 0 until size) {
+            val drawable = when (i % 3) {
+                0 -> R.drawable.ic_burger
+                1 -> R.drawable.ic_fries
+                else -> R.drawable.ic_honey
+            }
+            val itemName = when (i % 3) {
+                0 -> "Burger"
+                1 -> "Fries"
+                else -> "Honey"
+            }
+
+            val item = ExampleItem(drawable, itemName ,"Item $i")
+            list += item
+        }
+        return list
+    }
 }

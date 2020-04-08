@@ -21,4 +21,6 @@
     <string name="textview_0">0</string>
     <string name="activity2_button">activity 2</string>
     <string name="home_button">Home</string>
+    <string name="line_1">Line 1</string>
+    <string name="line_2">Line 2</string>
 </resources>
