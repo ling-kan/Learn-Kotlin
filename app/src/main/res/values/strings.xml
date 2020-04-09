@@ -16,11 +16,14 @@
     <string name="r">R</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="activity1_button">Activity 1</string>
+    <string name="hello_blank_fragment">Learning Kotlin</string>
+    <string name="activity1_button">Activity 1 - Basic </string>
     <string name="textview_0">0</string>
-    <string name="activity2_button">activity 2</string>
+    <string name="activity2_button">Activity 2 - RecyclerView </string>
     <string name="home_button">Home</string>
     <string name="line_1">Line 1</string>
     <string name="line_2">Line 2</string>
+    <string name="title_activity_list">Activity3</string>
+    <string name="title_activity_detail">Activity3 Detail</string>
+    <string name="todo">TODO</string>
 </resources>

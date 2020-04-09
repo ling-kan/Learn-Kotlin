@@ -46,5 +46,18 @@
         android:id="@+id/Activity2Fragment"
         android:name="com.example.learnkotlinapp.Activity2Fragment"
         android:label="fragment_activity2"
-        tools:layout="@layout/fragment_activity2" />
+        tools:layout="@layout/fragment_activity2" >
+        <action
+            android:id="@+id/action_Activity2Fragment_to_activity2Fragment2"
+            app:destination="@id/Activity2Fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/Activity2Fragment2"
+        android:name="com.example.learnkotlinapp.Activity2Fragment2"
+        android:label="fragment_activity2_2"
+        tools:layout="@layout/fragment_activity2_2" >
+        <action
+            android:id="@+id/action_activity2Fragment2_to_Activity2Fragment"
+            app:destination="@id/Activity2Fragment" />
+    </fragment>
 </navigation>
