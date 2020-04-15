@@ -37,6 +37,7 @@ class Activity2Fragment : Fragment() {
                 DividerItemDecoration.VERTICAL
             )
         )
+
     }
 
     private fun createFakeList(size: Int): List<ExampleItem> {
