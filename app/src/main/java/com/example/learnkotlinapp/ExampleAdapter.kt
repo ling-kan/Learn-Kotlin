@@ -41,6 +41,7 @@ class ExampleAdapter(private val exampleList: List<ExampleItem>) :
             view.findNavController().navigate(R.id.action_Activity2Fragment_to_activity2Fragment2)
         }
 
+        // Does the same as above, difference?
         /*holder.itemView.setOnClickListener(
           Navigation.createNavigateOnClickListener(R.id.action_Activity2Fragment_to_activity2Fragment2)
       )*/
