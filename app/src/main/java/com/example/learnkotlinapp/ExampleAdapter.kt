@@ -1,6 +1,7 @@
 package com.example.learnkotlinapp
 
 import android.app.PendingIntent.getActivity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,10 +9,12 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.example_item.view.*
-import java.security.AccessController.getContext
-import kotlin.coroutines.coroutineContext
+import androidx.navigation.fragment.navArgs
 
 // View holder represent a single row in view holder
 // Cache references in view holder and reference them
@@ -32,9 +35,31 @@ class ExampleAdapter(private val exampleList: List<ExampleItem>) :
         holder.textView1.text = currentItem.text1
         holder.textView2.text = currentItem.text2
 
-        holder.itemView.setOnClickListener {
-            Toast.makeText(holder.imageView.context, "Clicked ${currentItem.text1} ${currentItem.text2} " , Toast.LENGTH_SHORT).show()
+
+
+        holder.itemView.setOnClickListener{ view ->
+            view.findNavController().navigate(R.id.action_Activity2Fragment_to_activity2Fragment2)
         }
+
+        /*holder.itemView.setOnClickListener(
+          Navigation.createNavigateOnClickListener(R.id.action_Activity2Fragment_to_activity2Fragment2)
+      )*/
+
+        /*
+        // Start another activity with position
+        val intent = Intent(this, Activity2Fragment2::class.java)
+        intent.putExtra("textView1", currentItem.text1);
+        intent.putExtra("textView2", currentItem.text2);
+        startActivity(intent)
+        */
+
+
+         Toast.makeText(
+                holder.imageView.context,
+                "Clicked ${currentItem.text1} ${currentItem.text2} ",
+                Toast.LENGTH_SHORT
+         ).show()
+
     }
 
     override fun getItemCount() = exampleList.size
