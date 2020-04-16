@@ -27,4 +27,7 @@
     <string name="done">Done</string>
     <string name="description">Enter Task Description</string>
     <string name="add_a_task">Add A Task</string>
+    <string name="alert_title">Task</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
 </resources>
