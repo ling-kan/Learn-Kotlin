@@ -34,5 +34,10 @@ class MainFragment : Fragment() {
             this.findNavController().navigate(R.id.action_mainFragment_to_Activity2Fragment)
         }
 
+
+        view.findViewById<Button>(R.id.activity3_button).setOnClickListener {
+            this.findNavController().navigate(R.id.action_mainFragment_to_Activity3Fragment)
+        }
+
     }
 }
