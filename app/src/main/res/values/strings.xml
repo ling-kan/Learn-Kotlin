@@ -30,4 +30,7 @@
     <string name="alert_title">Task</string>
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
+    <string name="title_activity_4">Activity4</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="countdown_text">10:00</string>
 </resources>

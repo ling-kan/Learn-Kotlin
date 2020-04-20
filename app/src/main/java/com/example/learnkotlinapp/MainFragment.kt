@@ -1,5 +1,6 @@
 package com.example.learnkotlinapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -39,5 +40,10 @@ class MainFragment : Fragment() {
             this.findNavController().navigate(R.id.action_mainFragment_to_Activity3Fragment)
         }
 
+        view.findViewById<Button>(R.id.activity4_button).setOnClickListener {
+       //     this.findNavController().navigate(R.id.action_mainFragment_to_firstFragment)
+            val intent = Intent(activity, Activity4::class.java)
+            startActivity(intent)
+        }
     }
 }

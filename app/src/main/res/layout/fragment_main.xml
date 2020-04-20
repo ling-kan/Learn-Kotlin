@@ -33,4 +33,10 @@
         android:layout_height="wrap_content"
         android:text="@string/activity3_button" />
 
+    <Button
+        android:id="@+id/activity4_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity 4" />
+
 </LinearLayout>
