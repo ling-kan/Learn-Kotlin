@@ -1,12 +1,14 @@
 package com.example.learnkotlinapp
 
 import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.example_item.view.*
@@ -36,16 +38,13 @@ class ExampleAdapter(private val exampleList: List<ExampleItem>) :
          )*/
 
         holder.itemView.setOnClickListener { view ->
-
-
             Toast.makeText(
                 holder.imageView.context,
                 "Clicked ${currentItem.text1} ${currentItem.text2} ",
                 Toast.LENGTH_SHORT
             ).show()
 
-          /*
-            fragment.setArguments(args)
+          /*fragment.setArguments(args)
             val bundle = Bundle();
             bundle.putString("textView1", currentItem.text1 );
             bundle.putString("textView2", currentItem.text2 );
@@ -60,8 +59,16 @@ class ExampleAdapter(private val exampleList: List<ExampleItem>) :
             intent.putExtra("textView2", currentItem.text2);
          //   context.startActivity(intent) // Error
 
+           val fragment2 = Activity2Fragment();
+            val bundle = Bundle()
+            bundle.putString("textView1", currentItem.text1)
+            bundle.putString("textView2", currentItem.text2)
+            fragment2.arguments = bundle
+
+            //  val bundle = bundleOf("myArgs2" to currentItem.text1 )
             //Redirect page
             view.findNavController().navigate(R.id.action_Activity2Fragment_to_activity2Fragment2)
+          //  bundle
         }
     }
 
